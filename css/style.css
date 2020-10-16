@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Commissioner', sans-serif;
 }
 
 
@@ -20,18 +21,36 @@ html,body{
 .clear{
 	clear: both;
 }
+
+.btn{
+	text-transform: uppercase;
+	padding: 0.5rem 0.8rem;
+	border: none;
+	background-color: rgb(99, 177, 177);
+	transition: 0.5s;
+	transition-timing-function: ease-in-out;
+	width: 10rem;
+	letter-spacing: 0.1rem;
+	color: white;
+}
+
+.btn:hover{
+	background-color: rgb(39, 155, 83);
+	color: white;
+}
+
 /******/
 
 header{
 	background-color: #D6D6D6;
-	padding:10px 2%;
+	padding:10px 2% 30px 2%;
 }
 
 .logo-1{
 	float: left;
 	width: 150px;
 	height: 60px;
-	background-image: url('../imagens/logo1.png');
+	background-image: url('../imagens/logo3.png');
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -42,14 +61,163 @@ header{
 	float: right;
 	width: 160px;
 	height: 60px;
-	background-image: url('../imagens/logo2.png');
+	background-image: url('../imagens/logo3.png');
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: center;
 	/*background-color: green;*/
 }
 
-@media screen and (max-width: 510px){
+/* cover-form */
+
+.cover-form{
+	width: 100%;
+}
+
+.bg{
+	height: 500px;
+	background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)) ,url(../imagens/bg-form.jpg)center/cover no-repeat;
+	position: relative;
+}
+
+.form-container{
+	width: 400px;
+	height: 110%;
+	background-color: rgba(234, 241, 243,0.7);
+	position: absolute;
+	top: -5%;
+	right: 5%;
+	border: none;
+	z-index: 1;
+}
+
+.form-container:hover{
+	-webkit-box-shadow: 4px 7px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 7px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 4px 7px 5px 0px rgba(0,0,0,0.75);
+}
+
+.form-container h2{
+	text-transform: uppercase;
+	padding: 30px 15px;
+	background-color: rgba(181, 199, 204, 0.9);
+	font-size: 1.12rem;
+	font-weight: normal;
+}
+
+.form-container form{
+	margin: 10% 4%;
+	text-transform: capitalize;
+	color: rgb(92, 89, 89);
+	font-size: 1.2rem;
+}
+
+.form-container form input[type=text],
+.form-container form input[type=tel],
+.form-container form input[type=email]{
+	width: 90%;
+	height: 2.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+	margin-left: 1rem;
+	padding: 1rem;
+	background-color: rgb(218, 229, 240);
+	color: rgb(63, 58, 58);
+	border-radius: 0.5rem;
+	border: none;
+	letter-spacing: 0.1rem;
+	font-weight: 600;
+}
+
+.form-container form input[type=text]:hover,
+.form-container form input[type=tel]:hover,
+.form-container form input[type=email]:hover{
+	-webkit-box-shadow: 4px 7px 5px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 4px 7px 5px 1px rgba(0,0,0,0.1);
+	box-shadow: 4px 7px 5px 1px rgba(0,0,0,0.1);
+}
+
+
+.form-container .btn{
+	margin-left: 50%;
+	transform: translate(-50%, 100%);
+	border-radius: 0.2rem;
+	font-size: 1.1rem;
+}
+
+
+/* CHAMADA */
+
+.chamada{
+	width: 100%;
+	text-align: center;
+	background-color: rgb(189, 200, 233);
+	padding: 80px 0;
+}
+
+.chamada h2{
+margin-bottom: 10px;
+}
+
+.chamada p{
+	display: inline-flex;
+}
+
+
+/* MOSAICO  */
+
+.flex-mosaico{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	background-color: rgb(164, 172, 197);
+	padding: 20px 0 0 0;
+}
+
+.flex-mosaico:hover{
+	background-color: rgb(184, 193, 223);
+}
+
+
+.flex-mosaico h3{
+	margin-bottom: 15px;
+}
+
+.item-1-mosaico{
+	width: 80%;
+	overflow: hidden;
+	position: relative;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.item-1-mosaico img{
+	width: 100%;
+	transition: all 0.8s ease-in-out;
+	border-radius: 5%;
+}
+
+.item-1-mosaico:hover img{
+	transform: scale(1.1);
+	opacity: 0.8;
+}
+
+.item-2-mosaico{
+	width: 100%;
+	padding: 2%;
+	position: relative;
+	height: 100%;
+}
+
+.item-2-mosaico p{
+	text-align: justify;
+
+}
+
+
+/* MEDIA SCREEN */
+
+@media screen and (max-width: 750px){
 
 	header{
 		text-align: center;
@@ -60,6 +228,32 @@ header{
 		display: inline-block;
 		float: none;
 	}
+	
+	.form-container{
+		position: absolute;
+		top: -20px;	
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
+}
 
+footer{
+	text-align: center;
+	background-color: rgb(163, 170, 192);
+	margin-top: 2px;
+}
+
+@media screen and (max-width: 890px){
+	.flex-mosaico{
+		display: inline-block;
+		padding-left: 15%;
+	}
+
+	.item-2-mosaico{
+		text-align: center;
+		margin-left: -8%;
+		padding: 5%;
+	
+	}
 }
